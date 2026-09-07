@@ -8,7 +8,7 @@ KPMG-Sponsored IS Consulting Challenge, IS 3060-004, Fall 2026.
 |---|---|
 | Nick Kouzmanoff | u1574060 |
 | Nicholas Rudy | u1630750 |
-| Carter Wilson | TBD |
+| Carter Wilson | u1487679 |
 | Evan Moynihan | TBD |
 
 ## Track
