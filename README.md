@@ -28,6 +28,7 @@ Each milestone folder holds the lab artifact for that stage of the consulting en
 - `milestone-01-tableau-dashboard/` — Lab 1: Tableau dashboard comparing revenue, expenses, and profitability by store.
 - `milestone-02-database-schema/` — Lab 2: SQL schema for the capital investment tracker (projected vs. actual ROI, payback period by store).
 - `milestone-03-wix-prototype/` — Lab 3: Wix prototype of the ROI scorecard interface, plus cloud/SaaS hosting evaluation.
+  - `milestone-03-wix-prototype/lab3-mobile-app/` — Lab 3: Thunkable mobile app prototype of the ROI calculator for store managers. See [lab3-mobile-app/README.md](milestone-03-wix-prototype/lab3-mobile-app/README.md).
 - `milestone-04-backend-prototype/` — Lab 4: Vibe-coded ROI/payback calculator backend.
 - `milestone-05-risk-register/` — Lab 5: Cybersecurity risk register for the data behind the scorecard.
 - `milestone-06-implementation-plan/` — Lab 6: Implementation timeline and AI governance plan.
