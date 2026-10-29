@@ -40,9 +40,9 @@
   <!-- ===== HERO SECTION: organization and process ===== -->
   <header class="hero" id="home">
     <div class="container">
-      <p class="text-uppercase small mb-2">Scholars Opportunity Fund &middot; Student-Run Event-Driven Fund</p>
+      <p class="text-uppercase small mb-2">Scholars Opportunity Fund &middot; Student-Run Systematic Hedge Fund</p>
       <h1 class="display-5 fw-bold">From Requests to Decisions: A Connected Research Workflow</h1>
-      <p class="lead mt-3">Analysts ask pod leads for research on merger, spin-off, and other event-driven situations. Draft 3 keeps the form and queue from Draft 2 and adds a live dashboard, a five-stage workflow tracker, duplicate-request detection, and a priority recommendation tool, so the process supports decisions and not only record keeping.</p>
+      <p class="lead mt-3">Analysts ask pod leads for research support on the fund's systematic strategies, from catalyst screens built on event-driven work to quantitative and text-based signals. Draft 3 keeps the form and queue from Draft 2 and adds a live dashboard, a five-stage workflow tracker, duplicate-request detection, and a priority recommendation tool, so the process supports decisions and not only record keeping.</p>
       <a href="#request" class="btn btn-light btn-lg mt-2 me-2">Submit a request</a><a href="#queue" class="btn btn-outline-light btn-lg mt-2">View the queue</a>
     </div>
   </header>
@@ -52,7 +52,7 @@
     <!-- ===== ABOUT THE PROCESS: who uses it and why ===== -->
     <section id="about" class="mb-5">
       <h2 class="section-title mb-4">About the Process</h2>
-      <p>The <strong>research request process</strong> is how an analyst gets help from the fund on a specific event-driven situation, such as a pending acquisition or a spin-off. The fund trades real capital, so research needs to be timely and consistent.</p>
+      <p>The <strong>research request process</strong> is how an analyst gets help from the fund on a specific research task, such as testing a catalyst signal, pulling filing data, or reviewing a corporate event. The fund is a systematic hedge fund that mainly finds its catalysts through event-driven work, and its strategies range well beyond any single event type. Research needs to be timely and consistent.</p>
 
       <div class="row g-4 mt-1">
         <div class="col-md-6 col-lg-4">
@@ -70,8 +70,8 @@
           <div class="card h-100 process-card"><div class="card-body">
             <h3>Inputs and Resources</h3>
             <ul class="mb-0">
-              <li>Message or email describing the situation</li>
-              <li>SEC filings and the deal announcement</li>
+              <li>Message or email describing the idea or data need</li>
+              <li>SEC filings (EDGAR), market data, and event feeds</li>
               <li>Shared tracking spreadsheet</li>
               <li>Analyst and pod lead time</li>
             </ul>
@@ -91,13 +91,13 @@
         <div class="col-md-6 col-lg-6">
           <div class="card h-100 process-card"><div class="card-body">
             <h3>Outputs</h3>
-            <p class="mb-0">A short research memo on the situation and a recommendation on whether to take a position.</p>
+            <p class="mb-0">A short research memo, dataset, or backtest result that shows whether a catalyst or signal is worth adding to a strategy.</p>
           </div></div>
         </div>
         <div class="col-md-6 col-lg-6">
           <div class="card h-100 process-card"><div class="card-body">
             <h3>Customers</h3>
-            <p class="mb-0">The portfolio managers and the fund as a whole, who rely on the memo to decide how to allocate capital.</p>
+            <p class="mb-0">The portfolio managers and the fund as a whole, who rely on that research to decide which signals and strategies to run.</p>
           </div></div>
         </div>
       </div>
@@ -110,10 +110,10 @@
         <strong>Update (Draft 3):</strong> Requests are submitted with the form, tracked through five workflow stages, and summarized on the dashboard. Original process information is kept for reference.
       </div>
       <ul class="list-group">
-        <li class="list-group-item"><strong>How to ask:</strong> Message your pod lead with the company name and a short description of the situation.</li>
+        <li class="list-group-item"><strong>How to ask:</strong> Message your pod lead with the ticker or universe and a short description of the idea.</li>
         <li class="list-group-item"><strong>How to check status:</strong> Open the shared tracking spreadsheet and look for your row, if one was added.</li>
         <li class="list-group-item"><strong>Typical wait:</strong> Varies. Requests that arrive during exam weeks can wait several days.</li>
-        <li class="list-group-item"><strong>Known issue:</strong> Two analysts sometimes research the same company without knowing it.</li>
+        <li class="list-group-item"><strong>Known issue:</strong> Two analysts sometimes research the same name or signal without knowing it.</li>
       </ul>
       <p class="text-muted small mt-3">Sample content for a class lab. It illustrates a realistic process and does not describe any official fund policy.</p>
     </section>
@@ -162,7 +162,7 @@
             <label for="eventType" class="form-label">Event type</label>
             <select id="eventType" class="form-select" required>
               <option value="">Choose...</option>
-              <option>Merger / acquisition</option><option>Spin-off</option><option>Tender offer</option><option>Activist situation</option><option>Other</option>
+              <option>Corporate action</option><option>Earnings / guidance</option><option>Filing / text signal</option><option>Ownership / activist change</option><option>Other</option>
             </select>
             <div class="invalid-feedback">Pick an event type.</div>
           </div>
@@ -178,7 +178,7 @@
           <div class="col-12">
             <label for="summary" class="form-label">What do you need? (20 characters minimum)</label>
             <textarea id="summary" class="form-control" rows="3" required minlength="20"></textarea>
-            <div class="invalid-feedback">Describe the situation in at least 20 characters.</div>
+            <div class="invalid-feedback">Describe the request in at least 20 characters.</div>
           </div>
         </div>
         <button type="submit" class="btn btn-danger mt-3 align-self-start">Submit request</button>
@@ -204,7 +204,7 @@
       <div class="table-responsive">
         <table class="table table-striped table-hover align-middle bg-white">
           <thead class="table-dark">
-            <tr><th>ID</th><th>Ticker</th><th>Event</th><th>Analyst</th><th>Priority</th><th>Needed by</th><th>Status</th><th>Progress</th><th></th></tr>
+            <tr><th>ID</th><th>Ticker</th><th>Catalyst type</th><th>Analyst</th><th>Priority</th><th>Needed by</th><th>Status</th><th>Progress</th><th></th></tr>
           </thead>
           <tbody id="queueBody"></tbody>
         </table>
@@ -261,12 +261,12 @@
 
     function sampleData() {
       return [
-        {id: 101, ticker: "ABCD", event: "Merger / acquisition", analyst: "Sample Analyst A", priority: "High",   created: dayStr(-6),  deadline: dayStr(2),   status: "In Research", completed: null,      summary: "Spread widening after regulatory second request."},
-        {id: 102, ticker: "WXYZ", event: "Spin-off",             analyst: "Sample Analyst B", priority: "Medium", created: dayStr(-3),  deadline: dayStr(9),   status: "Submitted",   completed: null,      summary: "Form 10 filed, need valuation of the spun entity."},
-        {id: 103, ticker: "QRST", event: "Tender offer",         analyst: "Sample Analyst C", priority: "Low",    created: dayStr(-12), deadline: dayStr(-4),  status: "Complete",    completed: dayStr(-6), summary: "Memo on tender price versus current trading price."},
-        {id: 104, ticker: "LMNO", event: "Activist situation",   analyst: "Sample Analyst A", priority: "Medium", created: dayStr(-9),  deadline: dayStr(-1),  status: "In Review",   completed: null,      summary: "Review of the activist letter and board response."},
-        {id: 105, ticker: "HIJK", event: "Merger / acquisition", analyst: "Sample Analyst D", priority: "High",   created: dayStr(-2),  deadline: dayStr(4),   status: "Triaged",     completed: null,      summary: "All-stock deal, check exchange ratio and collar."},
-        {id: 106, ticker: "EFGH", event: "Spin-off",             analyst: "Sample Analyst B", priority: "Low",    created: dayStr(-15), deadline: dayStr(-8),  status: "Complete",    completed: dayStr(-9), summary: "Post spin-off ownership and index flows."}
+        {id: 101, ticker: "ABCD", event: "Corporate action", analyst: "Sample Analyst A", priority: "High",   created: dayStr(-6),  deadline: dayStr(2),   status: "In Research", completed: null,      summary: "Deal announced; test whether the announcement-window signal holds across the universe."},
+        {id: 102, ticker: "WXYZ", event: "Filing / text signal",             analyst: "Sample Analyst B", priority: "Medium", created: dayStr(-3),  deadline: dayStr(9),   status: "Submitted",   completed: null,      summary: "New 8-K item tags from EDGAR; check if the text signal adds to the fundamentals model."},
+        {id: 103, ticker: "QRST", event: "Earnings / guidance",         analyst: "Sample Analyst C", priority: "Low",    created: dayStr(-12), deadline: dayStr(-4),  status: "Complete",    completed: dayStr(-6), summary: "Analyst-expectations revisions around guidance changes; backtest summary."},
+        {id: 104, ticker: "LMNO", event: "Ownership / activist change",   analyst: "Sample Analyst A", priority: "Medium", created: dayStr(-9),  deadline: dayStr(-1),  status: "In Review",   completed: null,      summary: "Use 13D filings as a catalyst feed and flag overlap with existing signals."},
+        {id: 105, ticker: "HIJK", event: "Corporate action", analyst: "Sample Analyst D", priority: "High",   created: dayStr(-2),  deadline: dayStr(4),   status: "Triaged",     completed: null,      summary: "Spin-off Form 10 filed; screen for post-event drift and index-flow effects."},
+        {id: 106, ticker: "EFGH", event: "Filing / text signal",             analyst: "Sample Analyst B", priority: "Low",    created: dayStr(-15), deadline: dayStr(-8),  status: "Complete",    completed: dayStr(-9), summary: "Re-run text-feature extraction on the latest filings batch."}
       ];
     }
     function load() {
@@ -366,7 +366,7 @@
       var ev = document.getElementById("eventType").value, dl = document.getElementById("deadline").value;
       var box = document.getElementById("prioHint");
       if (!ev || !dl) { box.classList.add("d-none"); return; }
-      var weight = {"Merger / acquisition": 3, "Tender offer": 3, "Spin-off": 2, "Activist situation": 2, "Other": 1}[ev];
+      var weight = {"Corporate action": 3, "Earnings / guidance": 3, "Filing / text signal": 2, "Ownership / activist change": 2, "Other": 1}[ev];
       var days = daysBetween(dayStr(0), dl);
       var urgency = days <= 3 ? 3 : (days <= 7 ? 2 : 1);
       var score = weight + urgency;
