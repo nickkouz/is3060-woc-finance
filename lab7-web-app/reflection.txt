@@ -1,0 +1,11 @@
+My web project represents the research request process at the Scholars Opportunity Fund, a student-run event-driven fund. An analyst who wants research on a merger, spin-off, or similar situation asks a pod lead for help, the request gets tracked, and someone writes a memo that portfolio managers use to decide how to allocate capital.
+
+The original process had a few clear weaknesses. Requests arrived by message with missing details, so pod leads had to ask follow-up questions before starting. Status lived in a shared spreadsheet that was not always updated, so analysts could not tell where their request stood. Two analysts could also research the same company without knowing it.
+
+In Draft 2 I added a validated request form and a searchable, filterable queue. The form changed the process structure, because required fields and format checks make each request complete the first time. The queue changed the process resources, because message threads and a spreadsheet became one shared view that anyone can check without interrupting a pod lead. So Draft 2 changed both structure and resources.
+
+In Draft 3 I added a dashboard, a five-stage workflow tracker, duplicate detection, and a priority recommendation. The dashboard turns the queue into measures such as open requests, overdue requests, and average days to complete, which gives managers a reason to move work early. The workflow stages make it clear who owns the request at each step. The duplicate warning connects information that used to sit in separate conversations, and the priority tool scores event type and time left so prioritization is more consistent. Together these improve process quality by cutting wasted work and speeding up decisions.
+
+The AI assistant worked as an information systems resource. It turned a written description of a process into working code, and it let me test ideas quickly, so I could spend my time judging whether a feature improved the process and not on syntax. I still had to decide what counted as a weakness and test every feature in a browser, because the code only helps if it matches how the process really works.
+
+The main thing I learned about continuous improvement is that it works in layers. Draft 1 made the process visible, Draft 2 fixed how information is captured and shared, and Draft 3 used that information to support decisions.

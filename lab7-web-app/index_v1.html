@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SOF Research Requests | Draft 1: As-Is Process</title>
+  <!-- Bootstrap 5 for the responsive layout -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Page-level styling */
+    body { background: #f8f9fa; }
+    .hero { background: linear-gradient(135deg, #8b0000, #4a0000); color: #fff; padding: 4rem 0; }
+    .hero .lead { max-width: 46rem; }
+    .section-title { border-left: 5px solid #8b0000; padding-left: .75rem; }
+    .process-card h3 { font-size: 1rem; text-transform: uppercase; letter-spacing: .05em; color: #8b0000; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION BAR: Home, About, Contact ===== -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">SOF Research Requests</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION: organization and process ===== -->
+  <header class="hero" id="home">
+    <div class="container">
+      <p class="text-uppercase small mb-2">Scholars Opportunity Fund &middot; Student-Run Event-Driven Fund</p>
+      <h1 class="display-5 fw-bold">How Research Requests Move Through the Fund Today</h1>
+      <p class="lead mt-3">Analysts ask pod leads for research on merger, spin-off, and other event-driven situations. This page describes the current, mostly informal process: requests come in by message, get picked up when someone sees them, and are tracked in a shared spreadsheet.</p>
+      <a href="#about" class="btn btn-light btn-lg mt-2">See the process</a>
+    </div>
+  </header>
+
+  <main class="container my-5">
+
+    <!-- ===== ABOUT THE PROCESS: who uses it and why ===== -->
+    <section id="about" class="mb-5">
+      <h2 class="section-title mb-4">About the Process</h2>
+      <p>The <strong>research request process</strong> is how an analyst gets help from the fund on a specific event-driven situation, such as a pending acquisition or a spin-off. The fund trades real capital, so research needs to be timely and consistent.</p>
+
+      <div class="row g-4 mt-1">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 process-card"><div class="card-body">
+            <h3>Process Users</h3>
+            <ul class="mb-0">
+              <li>Analysts who request research</li>
+              <li>Pod leads who assign and review it</li>
+              <li>Portfolio managers who use the output</li>
+              <li>Faculty advisor, who oversees the fund</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 process-card"><div class="card-body">
+            <h3>Inputs and Resources</h3>
+            <ul class="mb-0">
+              <li>Message or email describing the situation</li>
+              <li>SEC filings and the deal announcement</li>
+              <li>Shared tracking spreadsheet</li>
+              <li>Analyst and pod lead time</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 process-card"><div class="card-body">
+            <h3>Activities</h3>
+            <ol class="mb-0">
+              <li>Analyst messages a pod lead</li>
+              <li>Pod lead replies when available</li>
+              <li>Request is added to the spreadsheet</li>
+              <li>Someone researches and posts a memo</li>
+            </ol>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="card h-100 process-card"><div class="card-body">
+            <h3>Outputs</h3>
+            <p class="mb-0">A short research memo on the situation and a recommendation on whether to take a position.</p>
+          </div></div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+          <div class="card h-100 process-card"><div class="card-body">
+            <h3>Customers</h3>
+            <p class="mb-0">The portfolio managers and the fund as a whole, who rely on the memo to decide how to allocate capital.</p>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CURRENT INFORMATION: static status of the process today ===== -->
+    <section id="updates" class="mb-5">
+      <h2 class="section-title mb-4">Current Information</h2>
+      <div class="alert alert-warning">
+        <strong>Notice:</strong> Requests are currently sent by message. If you do not hear back within a day or two, follow up with your pod lead directly.
+      </div>
+      <ul class="list-group">
+        <li class="list-group-item"><strong>How to ask:</strong> Message your pod lead with the company name and a short description of the situation.</li>
+        <li class="list-group-item"><strong>How to check status:</strong> Open the shared tracking spreadsheet and look for your row, if one was added.</li>
+        <li class="list-group-item"><strong>Typical wait:</strong> Varies. Requests that arrive during exam weeks can wait several days.</li>
+        <li class="list-group-item"><strong>Known issue:</strong> Two analysts sometimes research the same company without knowing it.</li>
+      </ul>
+      <p class="text-muted small mt-3">Sample content for a class lab. It illustrates a realistic process and does not describe any official fund policy.</p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER: contact / social links ===== -->
+  <footer class="bg-dark text-light py-4" id="contact">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <div>
+        <strong>Contact</strong><br>
+        Questions about requests: <a class="link-light" href="mailto:research-requests@example.com">research-requests@example.com</a>
+      </div>
+      <div>
+        <a class="link-light me-3" href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="link-light" href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS for the collapsing navbar -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
